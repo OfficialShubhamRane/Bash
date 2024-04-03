@@ -1,0 +1,19 @@
+#!/bin/bash
+
+NAME1=$1
+
+user=$(whoami)
+date=$(date)
+whereami=$(pwd)
+
+echo "Good morning $user"
+
+sleep 1
+
+echo "Today is $date"
+
+sleep 1
+
+echo "You are at $whereami"
+
+

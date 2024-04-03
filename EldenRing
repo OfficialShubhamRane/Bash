@@ -1,0 +1,47 @@
+#!/bin/bash
+
+myHealth=10
+enemyHealth=20
+combo=0
+myAttackDamage=1
+enemyAttackDamage=5
+echo "About to start...!"
+
+while [[ $myHealth > 0 || $enemyHelath > 0 ]]; do
+	echo "Choose block or attack!(0/1)"
+	read myChoice
+	echo "You chose   : $myChoice"
+
+	enemyChoice=$(( $RANDOM % 2 ))
+	echo "Enemy chose : $enemyChoice"
+
+	if [[ $enemyChoice < $myChoice ]]; then
+		combo=$(( $combo + 1 ))
+		myAttackDamage=$(( $myAttackDamage * $combo ))
+		if [[ $combo -gt 3 ]];then
+			myAttackDamage=$myAttackDamage * 100
+		fi
+		enemyHealth=$(( $enemyHealth - $myAttackDamage ))
+		myHealth=$(( $myHealth + $myAttackDamage ))
+	elif [[ $enemyChoice == 1 && $myChoice == 1 ]]; then
+		combo=0
+		enemyHealth=$(( $enemyHealth - $myAttackDamage ))
+		myHealth=$(( $myHealth - $enemyAttackDamage ))
+		myHealth=$(( $myHealth + $myAttackDamage ))
+	
+	else
+		echo "*ideologies are being discussed...*"
+	fi
+
+	echo "Your health   : $myHealth"
+	echo "Enemey health : $enemyHealth"
+
+	if [[ $myHealth -lt 1 ]]; then
+        	echo "YOU DIED!!!"
+        	exit 1
+	elif [[ $enemyHealth -lt 1 ]]; then
+        	echo "YOU ARE VICTORIOUS!!!"
+        	exit 1
+	fi
+done
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "what's your name?"
+
+read NAME1
+
+echo "Good morning $NAME1"
+
+sleep 1
+
+echo "You are looking good $NAME1"
+
+sleep 1
+
+echo "You have the best beard I have ever seen, $NAME1"
+
+

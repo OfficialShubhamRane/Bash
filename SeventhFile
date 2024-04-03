@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "You Died!"
+sleep 1
+echo "Restart?(y/n)"
+read answer
+
+if [[ $answer == "y" ]]; then
+	echo "pfff....you never learn -_-"
+else
+	echo "wise choice, loser!"
+fi

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Hello world"
+
+sleep 3
+
+echo "what's up?"
+
+sleep 3
+
+echo "Why so rude?"
+
+sleep 3
+
+echo "*starts crying* -> only Noaha survives"

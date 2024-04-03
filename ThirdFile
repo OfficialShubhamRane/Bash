@@ -1,0 +1,15 @@
+#!/bin/bash
+
+NAME1=$1
+
+echo "Good morning $NAME1"
+
+sleep 1
+
+echo "You are looking good $NAME1"
+
+sleep 1
+
+echo "You have the best $2 I have ever seen, $NAME1"
+
+

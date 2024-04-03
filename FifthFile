@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "What's you name?"
+
+read name
+
+echo "What's you age?"
+
+read age
+
+echo "$name, $age"
+
+echo $SHELL, $HOSTNAME, $PWD, $USER, $RANDOM
